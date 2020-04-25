@@ -6,21 +6,28 @@ while flag:
     command = input("input operation")
     if command == '+':
         print(value_1 + value_2)
-    elif command == '-':
-        print(value_1 - value_2)
-    elif command == '*':
-        print(value_1 * value_2)
-    elif command == '/':
-        print(value_1 / value_2)
-    else:
-        print( "Wrong command")
-        i += 1
         while True:
-             command = input ('Continue Y/N')
-             if command=='N':
+             command = input ('Continue Yes/No')
+             if command=='Yes':
+                break
+             elif command=='No':
                 flag = False
                 break
-             elif command=='Y':
+             else:
+                print("wrong command")
+                i += 1
+                if i == 3:
+                    flag = False
+                    print("too much errors!!!")
+                    break
+    elif command == '-':
+        print(value_1 - value_2)
+        while True:
+             command = input ('Continue Yes/No')
+             if command=='Yes':
+                break
+             elif command=='No':
+                flag = False
                 break
              else:
                  print("wrong command")
@@ -29,4 +36,51 @@ while flag:
                      flag = False
                      print("too much errors!!!")
                      break
-
+    elif command == '*':
+        print(value_1 * value_2)
+        while True:
+             command = input ('Continue Yes/No')
+             if command=='Yes':
+                break
+             elif command=='No':
+                flag = False
+                break
+             else:
+                 print("wrong command")
+                 i += 1
+                 if i == 3:
+                     flag = False
+                     print("too much errors!!!")
+                     break
+    elif command == '/':
+        print(value_1 / value_2)
+        while True:
+             command = input ('Continue Yes/No')
+             if command=='Yes':
+                break
+             elif command=='No':
+                flag = False
+                break
+             else:
+                 print("wrong command")
+                 i += 1
+                 if i == 3:
+                     flag = False
+                     print("too much errors!!!")
+                     break
+    else:
+        print( "Wrong command")
+        while True:
+             command = input ('Continue Yes/No')
+             if command=='Yes':
+                break
+             elif command=='No':
+                flag = False
+                break
+             else:
+                 print("wrong command")
+                 i += 1
+                 if i == 3:
+                     flag = False
+                     print("too much errors!!!")
+                     break
