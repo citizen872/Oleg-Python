@@ -12,6 +12,7 @@ while flag:
         print(value_1 * value_2)
     elif command == '/':
         print(value_1 / value_2)
+
     else:
         print( "Wrong command")
         j+=1
@@ -25,12 +26,16 @@ while flag:
                 command = input("input operation")
                 if command == '+':
                     print(value_1 + value_2)
+                    break
                 elif command == '-':
                     print(value_1 - value_2)
+                    break
                 elif command == '*':
                     print(value_1 * value_2)
+                    break
                 elif command == '/':
                     print(value_1 / value_2)
+                    break
                 else:
                     print("Wrong command")
                     j += 1
@@ -40,6 +45,16 @@ while flag:
             else:
                  print("wrong command")
             if i == 2:
-                  print("too much errors!!!")
                   flag = False
+                  print("too much errors!!!")
                   break
+    command = input('Continue Yes/No')
+    if command == 'Yes':
+        continue
+    elif command == 'No':
+        print("Goodbye")
+        flag = False
+        break
+    else:
+        print("Wrong command")
+        flag= False
