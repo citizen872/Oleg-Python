@@ -22,7 +22,18 @@ while flag:
                 break
             command = input ('Continue Yes/No')
             if command=='Yes':
-                break
+                command = input("input operation")
+                if command == '+':
+                    print(value_1 + value_2)
+                elif command == '-':
+                    print(value_1 - value_2)
+                elif command == '*':
+                    print(value_1 * value_2)
+                elif command == '/':
+                    print(value_1 / value_2)
+                else:
+                    print("Wrong command")
+                    j += 1
             elif command=='No':
                 flag = False
                 break
